@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.preloadOptionsSearch = exports.preloadOptionsLimit = void 0;const preloadOptionsLimit = 200;exports.preloadOptionsLimit = preloadOptionsLimit;
+const preloadOptionsSearch = 2000;exports.preloadOptionsSearch = preloadOptionsSearch;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.filtrableLevels = void 0;const filtrableLevels = ['read', 'write'];exports.filtrableLevels = filtrableLevels;

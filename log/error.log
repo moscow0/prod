@@ -1,0 +1,528 @@
+2022-09-04T14:28:59.111Z [localhost] uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1508:7)
+    at /home/zedafrica/uwazi/prod/app/server.js:161:8
+[Tenant error] Error: Accessing nonexistent async context
+2022-09-04T14:30:37.818Z [localhost] requestId: 9321 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 1
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:30:37.942Z [localhost] requestId: 4991 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 2
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:30:38.520Z [localhost] requestId: 9738 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 3
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:30:38.583Z [localhost] requestId: 7061 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 4
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:31:33.832Z [localhost] requestId: 8845 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 5
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:31:34.021Z [localhost] requestId: 86 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 6
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:31:34.103Z [localhost] requestId: 6197 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 7
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:36:20.265Z [localhost] requestId: 5164 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 8
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:36:20.417Z [localhost] requestId: 9834 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 9
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}
+2022-09-04T14:36:20.574Z [localhost] requestId: 9015 
+url: /api/thesauris
+ResponseError: {"error":"Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported","status":406}
+    at SniffingTransport.request (/home/zedafrica/uwazi/prod/node_modules/@elastic/transport/src/Transport.ts:532:17)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Client.SearchApi [as search] (/home/zedafrica/uwazi/prod/node_modules/@elastic/elasticsearch/src/api/api/search.ts:84:10)
+    at Object.countPerTemplate (/home/zedafrica/uwazi/prod/app/api/search/search.js:841:5)
+    at Object.get (/home/zedafrica/uwazi/prod/app/api/thesauri/thesauri.js:222:29)
+original error: {
+ "name": "ResponseError",
+ "meta": {
+  "body": {
+   "error": "Content-Type header [application/vnd.elasticsearch+json; compatible-with=8] is not supported",
+   "status": 406
+  },
+  "statusCode": 406,
+  "headers": {
+   "content-type": "application/json; charset=UTF-8",
+   "content-length": "117"
+  },
+  "meta": {
+   "context": null,
+   "request": {
+    "params": {
+     "method": "POST",
+     "path": "/uwazi_development/_search",
+     "body": "{\"explain\":false,\"_source\":{\"include\":[\"title\",\"icon\",\"processed\",\"creationDate\",\"editDate\",\"template\",\"metadata\",\"type\",\"sharedId\",\"toc\",\"attachments\",\"language\",\"documents\",\"uploaded\",\"published\",\"relationships\"],\"excludes\":[\"documents.__v\"]},\"from\":0,\"size\":0,\"query\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}}],\"must_not\":[],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}},{\"term\":{\"language\":\"en\"}}]}},\"sort\":[],\"aggregations\":{\"all\":{\"global\":{},\"aggregations\":{\"_types\":{\"terms\":{\"field\":\"template.raw\",\"missing\":\"missing\",\"size\":2000},\"aggregations\":{\"filtered\":{\"filter\":{\"bool\":{\"must\":[{\"bool\":{\"should\":[]}},{\"term\":{\"language\":\"en\"}}],\"filter\":[{\"bool\":{\"should\":[{\"term\":{\"published\":true}}]}}]}}}}}}}}}",
+     "querystring": "",
+     "headers": {
+      "user-agent": "elastic-transport-js/8.2.0 (linux 4.19.0-kali5-amd64-x64; Node.js v16.15.0)",
+      "x-elastic-client-meta": "es=8.2.1,js=16.15.0,t=8.2.0,hc=16.15.0",
+      "content-type": "application/vnd.elasticsearch+json; compatible-with=8",
+      "accept": "application/vnd.elasticsearch+json; compatible-with=8",
+      "content-length": "726"
+     }
+    },
+    "options": {},
+    "id": 10
+   },
+   "name": "elasticsearch-js",
+   "connection": {
+    "url": "http://localhost:9200/",
+    "id": "http://localhost:9200/",
+    "headers": {},
+    "status": "alive"
+   },
+   "attempts": 0,
+   "aborted": false
+  },
+  "warnings": null
+ }
+}

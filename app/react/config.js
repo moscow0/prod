@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.APIURL = void 0;const APIURL = process.env.API_URL || '/api/';exports.APIURL = APIURL;var _default =
+{ APIURL };exports.default = _default;

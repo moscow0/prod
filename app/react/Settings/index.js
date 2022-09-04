@@ -1,0 +1,16 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });Object.defineProperty(exports, "AccountSettings", { enumerable: true, get: function () {return _AccountSettings.default;} });Object.defineProperty(exports, "CollectionSettings", { enumerable: true, get: function () {return _CollectionSettings.CollectionSettings;} });Object.defineProperty(exports, "CustomUploads", { enumerable: true, get: function () {return _CustomUploads.default;} });Object.defineProperty(exports, "Customisation", { enumerable: true, get: function () {return _Customisation.default;} });Object.defineProperty(exports, "EntityTypesList", { enumerable: true, get: function () {return _EntityTypesList.default;} });Object.defineProperty(exports, "FiltersForm", { enumerable: true, get: function () {return _FiltersForm.default;} });Object.defineProperty(exports, "Languages", { enumerable: true, get: function () {return _Languages.default;} });Object.defineProperty(exports, "NavlinksSettings", { enumerable: true, get: function () {return _NavlinksSettings.default;} });Object.defineProperty(exports, "PreserveSettings", { enumerable: true, get: function () {return _PreserveSettings.PreserveSettings;} });Object.defineProperty(exports, "RelationTypesList", { enumerable: true, get: function () {return _RelationTypesList.default;} });Object.defineProperty(exports, "Settings", { enumerable: true, get: function () {return _Settings.default;} });Object.defineProperty(exports, "SettingsAPI", { enumerable: true, get: function () {return _SettingsAPI.default;} });Object.defineProperty(exports, "ThesauriList", { enumerable: true, get: function () {return _ThesauriList.default;} });Object.defineProperty(exports, "TranslationsList", { enumerable: true, get: function () {return _TranslationsList.default;} });
+var _AccountSettings = _interopRequireDefault(require("./components/AccountSettings"));
+var _CollectionSettings = require("./components/CollectionSettings");
+var _Customisation = _interopRequireDefault(require("./components/Customisation"));
+var _EntityTypesList = _interopRequireDefault(require("./components/EntityTypesList"));
+var _FiltersForm = _interopRequireDefault(require("./components/FiltersForm"));
+var _Languages = _interopRequireDefault(require("./components/Languages"));
+var _NavlinksSettings = _interopRequireDefault(require("./components/NavlinksSettings"));
+var _RelationTypesList = _interopRequireDefault(require("./components/RelationTypesList"));
+var _ThesauriList = _interopRequireDefault(require("./components/ThesauriList"));
+var _TranslationsList = _interopRequireDefault(require("./components/TranslationsList"));
+var _Settings = _interopRequireDefault(require("./Settings"));
+var _SettingsAPI = _interopRequireDefault(require("./SettingsAPI"));
+var _PreserveSettings = require("./components/PreserveSettings");
+
+var _CustomUploads = _interopRequireDefault(require("./components/CustomUploads"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}

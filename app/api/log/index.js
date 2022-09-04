@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });Object.defineProperty(exports, "debugLog", { enumerable: true, get: function () {return _debugLog.debugLog;} });Object.defineProperty(exports, "errorLog", { enumerable: true, get: function () {return _errorLog.errorLog;} });var _errorLog = require("./errorLog");
+var _debugLog = require("./debugLog");
